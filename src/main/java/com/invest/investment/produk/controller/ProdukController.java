@@ -24,14 +24,14 @@ public class ProdukController {
         return produkService.cariSemua();
     }
 
-    // METHOD CARI BY ID
-//    @GetMapping("/produk/{id}")
-//    public ProdukEntity cariDariId(@PathVariable("id") Long id){
-//        return produkService.cariDariId(id);
-//    }
+//     METHOD CARI BY ID
+    @GetMapping("/produk/{id}")
+    public ProdukEntity cariDariId(@PathVariable("id") Long id){
+        return produkService.cariDariId(id);
+    }
 
     // METHOD CARI BY CATEGORY
-    @GetMapping("/produk/{idCategory}")
+    @GetMapping("/produk/list/{idCategory}")
     public List<ProdukEntity> cariDariCategory(@PathVariable(value = "idCategory") Long idCategory){
         return produkService.findByCategory(idCategory);
     }

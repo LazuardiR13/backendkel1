@@ -26,6 +26,9 @@ public class ProdukEntity implements Serializable {
     @Column(name = "deskripsi_produk", nullable = false)
     private String deskripsi;
 
+    @Column(name = "deskripsi_produk_lengkap", nullable = false)
+    private String deskripsi_lengkap;
+
     @Column(name = "harga_produk_string", nullable = false)
     private String harga;
 
